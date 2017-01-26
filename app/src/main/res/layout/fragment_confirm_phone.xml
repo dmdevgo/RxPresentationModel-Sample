@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="RtlHardcoded">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+        app:title="@string/confirm_phone_screen_title"/>
+
+    <TextView
+        android:id="@+id/confirm_phone_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/confirm_phone_screen_text"/>
+
+    <me.dmdevgo.rxpm_sample.ui.custom.CustomEditText
+        android:id="@+id/edit_sms_code"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm_phone_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/sms_code_hint"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="4">
+
+        <requestFocus/>
+
+    </me.dmdevgo.rxpm_sample.ui.custom.CustomEditText>
+
+    <me.dmdevgo.rxpm_sample.ui.custom.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

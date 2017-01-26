@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RxPM_Sample</string>
+
+    <string name="action_done">Done</string>
+    <string name="action_search">Search</string>
+
+    <!-- Enter phone -->
+    <string name="enter_phone_screen_text">Please confirm your country code and enter your phone number.</string>
+    <string name="enter_phone_screen_title">Your phone</string>
+
+    <!-- Choose country -->
+    <string name="choose_country_screen_title">Choose country</string>
+    <string name="search">Search</string>
+
+    <!-- Confirm phone -->
+    <string name="confirm_phone_screen_title">Phone verification</string>
+    <string name="sms_code_hint">Code</string>
+    <string name="confirm_phone_screen_text">We\'ve sent an SMS with an activation code\nto your phone %s</string>
+    <string name="confirm_phone_wrong_sms_code_title">Incorrect code</string>
+
+    <!-- Main screen -->
+    <string name="main_screen_title">Main screen</string>
+
+</resources>
