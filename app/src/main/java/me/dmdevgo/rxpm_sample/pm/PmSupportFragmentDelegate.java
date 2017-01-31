@@ -44,6 +44,12 @@ public class PmSupportFragmentDelegate<PM extends PresentationModel> {
 
     public void onDestroy() {
 
+        //We leave the screen and respectively all fragments will be destroyed
+        if (fragment.getActivity().isFinishing()) {
+            pmPmDelegate.onDestroy();
+            return;
+        }
+
         // When we rotate device isRemoving() return true for fragment placed in backstack
         // http://stackoverflow.com/questions/34649126/fragment-back-stack-and-isremoving
         if (wasInstanceStateSaved) {
@@ -59,7 +65,7 @@ public class PmSupportFragmentDelegate<PM extends PresentationModel> {
             parent = parent.getParentFragment();
         }
 
-        if (fragment.isRemoving() || anyParentIsRemoving || fragment.getActivity().isFinishing()) {
+        if (fragment.isRemoving() || anyParentIsRemoving) {
             pmPmDelegate.onDestroy();
         }
     }
